@@ -106,7 +106,7 @@ def compare(r1, r2, show_diff=False, show_com=False, excludes1=None, excludes2=N
 
 def main():
     args = docopt(__doc__, version='main_deal')
-    print(args)
+    # print(args)
     kwargs = {
         'r1': args['<file1>'],
         'r2': args['<file2>'],
@@ -117,5 +117,5 @@ def main():
         'export': args['--export'],
         'file_path': args['<file_path>']
     }
-    print(kwargs)
+    # print(kwargs)
     compare(**kwargs)

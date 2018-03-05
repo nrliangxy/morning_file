@@ -16,7 +16,7 @@ def diff_export_file(list1, list2, path, results, export_filename):
 # export result json file
 def export_file(box1, box2, path, results, file_info=False):
     if file_info:
-        print(path.format('common.json'))
+        # print(path.format('common.json'))
         file_result = open(path + '{}'.format('common.json'), 'a+')
         for req in box1:
             if req in box2:

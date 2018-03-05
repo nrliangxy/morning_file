@@ -6,6 +6,7 @@ from collections import namedtuple
 
 # check file type and deal file depend on it is type
 def check_type(filename, field):
+    # print(field)
     temp_box = []
     if filename.endswith('.txt') or filename.endswith('.json') or filename.endswith('.jl'):
         with open(filename) as f:
@@ -26,9 +27,12 @@ def check_type(filename, field):
             Row = namedtuple('Row', headings)
             for line in f_csv:
                 item = Row(*line)
+                # print(field)
                 item = getattr(item, field, None) if field else item
-                if not item:
-                    raise ValueError("this file have not this field")
+                # print(item)
+                # if not item:
+                #     print('='*99)
+                    # raise ValueError("this file have not this field")
                 temp_box.append(item)
     else:
         raise ValueError('not support this file type')
