@@ -31,7 +31,7 @@ class Morning(object):
     
     def load(self, file, field):
         if not os.path.exists(file):
-            raise ValueError('The given file does not exitst')
+            raise ValueError('The given file does not exist')
         items = check_type(file, field)
         # print(items)
         self.box.extend(items)
